@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="puzzle.css" />
+    <script src="https://unpkg.com/animate-css-grid@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <title>puzzle</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>resolve the puzzle!</h1>
+        <img
+          src="./img/hanna.jpg"
+          width="90px"
+          height="90px"
+          alt="puzzle-background"
+        />
+      </section>
+      <section class="puzzle">
+        <div class="piece" style="--position: P11;"></div>
+        <div class="piece" style="--position: P12;"></div>
+        <div class="piece" style="--position: P13;"></div>
+        <div class="piece" style="--position: P21;"></div>
+        <div class="piece" style="--position: P22;"></div>
+        <div class="piece" style="--position: P23;"></div>
+        <div class="piece" style="--position: P31;"></div>
+        <div class="piece" style="--position: P32;"></div>
+        <div class="piece empty" style="--position: P33;"></div>
+      </section>
+      <section class="actions">
+        <button>play</button>
+      </section>
+    </main>
+    <script src="puzzle.js"></script>
+  </body>
+</html>

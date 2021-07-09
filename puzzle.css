@@ -1,0 +1,115 @@
+body {
+  margin: 0px;
+  background: #ecead8;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 40px;
+  width: 450px;
+  background-color: #e4b52a;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 350px;
+  margin: 25px 0px 15px;
+}
+
+.header > h1::first-letter {
+  text-transform: capitalize;
+}
+
+.header > h1 {
+  font-family: "Lobster", cursive;
+  color: rgb(192, 61, 61);
+  font-size: 32px;
+}
+
+.puzzle {
+  width: 360px;
+  height: 360px;
+  display: grid;
+  grid-gap: 2px;
+  border: 5px inset #cca226;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-areas:
+    "P11 P12 P13"
+    "P21 P22 P23"
+    "P31 P32 P33";
+  background-color: #866c1e;
+}
+
+.piece {
+  grid-area: var(--position, auto);
+  background: url(./img/hanna.jpg);
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.piece:first-child {
+  background-position: left top;
+}
+
+.piece:nth-child(2) {
+  background-position: center top;
+}
+
+.piece:nth-child(3) {
+  background-position: right top;
+}
+
+.piece:nth-child(4) {
+  background-position: left center;
+}
+
+.piece:nth-child(5) {
+  background-position: center center;
+}
+
+.piece:nth-child(6) {
+  background-position: right center;
+}
+
+.piece:nth-child(7) {
+  background-position: left bottom;
+}
+
+.piece:nth-child(8) {
+  background-position: center bottom;
+}
+
+.piece:nth-child(9) {
+  background: transparent;
+  cursor: default;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px 20px;
+  height: 40px;
+}
+
+.actions > button {
+  height: 40px;
+  width: 80px;
+  background-color: rgb(192, 61, 61);
+  border-radius: 5px;
+  color: white;
+  font-family: "Lobster", cursive;
+  font-size: 18px;
+}
+
+.actions > button::first-letter {
+  text-transform: capitalize;
+}
+
